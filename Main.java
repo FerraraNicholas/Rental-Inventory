@@ -36,31 +36,7 @@ public class Main {
 		inService.add(v7);
 		inService.add(v8);
 		inService.add(v9);
-		List<Vehicle>[] MasterList = new List[]{available, inUse, inService};
-		
-		//Need to case to doulbe
-		double p = (double) available.size() / (available.size() + inUse.size());
-		String rate = String.format("%,.2f", p);
-		String summary = new String("Rental Inventory (" + rate + " %Utilization)\n");
-		String[] labels = new String[]{"Available", "InUse", "Inservice"};
-		for (int i = 0; i <MasterList.length; i++){
-			summary = summary + labels[i] + "\n";
-			for (Vehicle vehicle : MasterList[i]){
-				summary += "\t" + vehicle + "\n";
-			}
-		}
-		System.out.println(summary);
-		
-		String s = "EEEE#4444";
-		String[] parts = s.split("#");
-	
-		System.out.println(parts[0]);
-		
-		
-	
-		
-		
-
+		List<Vehicle>[] MasterList = new List[]{available, inUse, inService};	
 	}
 
 }
